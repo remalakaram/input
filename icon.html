@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .main{
+                border: 1px solid black;
+                align-items: center;
+                display: inline;
+                padding: 2px;
+        }
+        .main>input{
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input type="password" value="" placeholder="Password" id="input" />
+        <i class="fa-solid fa-eye" id="icon"></i>
+    </div>
+
+
+    <script>
+        let input = document.getElementById("input")
+        let icon = document.getElementById("icon")
+        
+        console.log(input.type)
+console.log(icon.className)
+        icon.addEventListener("click" ,()=>{
+            if(input.type === "password"){
+            input.type = "text"
+            icon.className = "fa-solid fa-eye-slash"
+            
+
+
+            
+        }else{
+            input.type = "password"
+             icon.className = "fa-solid fa-eye"
+        }
+        })
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
